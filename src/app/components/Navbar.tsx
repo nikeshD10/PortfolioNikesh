@@ -109,15 +109,14 @@ const Navbar = () => {
         >
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-2 mt-0">
             {navLinks.map((navLink, index) => (
-              <React.Fragment key={index}>
-                <NavLink
-                  href={navLink.path}
-                  title={navLink.title}
-                  activeSection={activeSection}
-                  setActiveSection={setActiveSection}
-                  setTimeOfLastClick={setTimeOfLastClick}
-                />
-              </React.Fragment>
+              <NavLink
+                key={navLink.title}
+                href={navLink.path}
+                title={navLink.title}
+                activeSection={activeSection}
+                setActiveSection={setActiveSection}
+                setTimeOfLastClick={setTimeOfLastClick}
+              />
             ))}
           </ul>
         </div>
