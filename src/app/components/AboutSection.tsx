@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useTransition } from "react";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import MERN3 from "../../../public/images/mern/MERN3.png";
 
 const TAB_DATA = [
   {
@@ -127,7 +128,7 @@ const AboutSection = () => {
             </g>
           </svg> */}
           <Image
-            src="/images/mern/MERN3.png"
+            src={MERN3}
             alt="Profile"
             width={450}
             height={450}

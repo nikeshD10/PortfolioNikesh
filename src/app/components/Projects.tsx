@@ -15,6 +15,14 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import useWindowSize from "../hooks/useWindowSize";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import NodeEcommerce from "../../../public/images/projects/NodeEcommerce.png";
+import PortfolioPlain from "../../../public/images/projects/PortfolioPlain.png";
+import RoboFriends from "../../../public/images/projects/RoboFriends.png";
+import MERN from "../../../public/images/projects/MERN.png";
+import VetClinic from "../../../public/images/projects/VetClinic.png";
+import Pharmacy from "../../../public/images/projects/Pharmacy.png";
+import FaceRecognition from "../../../public/images/projects/FaceRecognition.png";
+import MealsToGo from "../../../public/images/projects/MealsToGo.jpg";
 
 const projects = [
   {
@@ -22,7 +30,7 @@ const projects = [
     title: "Ecommerce",
     description:
       "A simple ecommerce website built with NodeJS, ExpressJS, MongoDB, and EJS.",
-    imageUrl: "/images/projects/NodeEcommerce.png",
+    imageUrl: NodeEcommerce,
     demo: "https://youtu.be/SD3H5LYWEgE",
   },
   {
@@ -30,7 +38,7 @@ const projects = [
     title: "Personal Portfolio",
     description:
       "A personal portfolio website built with HTML, CSS and Vanilla JS.",
-    imageUrl: "/images/projects/PortfolioPlain.png",
+    imageUrl: PortfolioPlain,
     demo: "https://nikeshd10.github.io/Personal-Portfolio/",
   },
   {
@@ -38,7 +46,7 @@ const projects = [
     title: "Robot Friends",
     description:
       "A simple React and Redux app that fetches data from an API and displays it.",
-    imageUrl: "/images/projects/RoboFriends.png",
+    imageUrl: RoboFriends,
     demo: "https://www.youtube.com/watch?v=m4oBcHi3qJQ",
   },
   {
@@ -46,7 +54,7 @@ const projects = [
     title: "Geo Location Gallery",
     description:
       "A simple React app that fetches images from an API based on the user's location.",
-    imageUrl: "/images/projects/MERN.png",
+    imageUrl: MERN,
     demo: "https://youtu.be/xdjjXUxOWCg",
   },
   {
@@ -54,7 +62,7 @@ const projects = [
     title: "React Native Vet Clinic App",
     description:
       "A React Native app that allows users to get real time update of a pet. And consult with the vet.",
-    imageUrl: "/images/projects/VetClinic.png",
+    imageUrl: VetClinic,
     demo: "https://www.youtube.com/watch?v=m4oBcHi3qJQ",
   },
   {
@@ -62,7 +70,7 @@ const projects = [
     title: "Pharmacy Management App",
     description:
       "A React Native app that allows pharmacies to manage their schedule and allow even exchange their schedule with other pharmacies.",
-    imageUrl: "/images/projects/Pharmacy.png",
+    imageUrl: Pharmacy,
     demo: "https://www.youtube.com/watch?v=34UNscgesSA",
   },
   {
@@ -70,7 +78,7 @@ const projects = [
     title: "Face Recognition App",
     description:
       "A React app that uses the Clarifai API to detect faces in an image. Authentication handled and state management with redux.",
-    imageUrl: "/images/projects/FaceRecognition.png",
+    imageUrl: FaceRecognition,
     demo: "https://github.com/nikeshD10/Face-Recognition-Brain",
   },
   {
@@ -78,7 +86,7 @@ const projects = [
     title: "Food Ordering App",
     description:
       "A React Native app that allows users to filter food, choose user location and order food from a restaurant.",
-    imageUrl: "/images/projects/MealsToGo.jpg",
+    imageUrl: MealsToGo,
     demo: "https://github.com/nikeshD10/MealsToGo",
   },
 ] as const;

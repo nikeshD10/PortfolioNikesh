@@ -6,142 +6,177 @@ import { useInView as observerUseInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import useWindowSize from "../hooks/useWindowSize";
 
+import Bootstrap from "../../../public/images/Skills/Bootstrap.png";
+import C from "../../../public/images/Skills/C.png";
+import CSharp from "../../../public/images/Skills/CSharp.png";
+import CPlusPlus from "../../../public/images/Skills/CPlusPlus.png";
+import CSS from "../../../public/images/Skills/CSS.png";
+import EJS from "../../../public/images/Skills/EJS.png";
+import Express from "../../../public/images/Skills/Express.png";
+import Figma from "../../../public/images/Skills/Figma.png";
+import Git from "../../../public/images/Skills/Git.png";
+import Github from "../../../public/images/Skills/Github.png";
+import Gitlab from "../../../public/images/Skills/Gitlab.png";
+import Graphql from "../../../public/images/Skills/Graphql.png";
+import HTML from "../../../public/images/Skills/HTML.png";
+import Javascript from "../../../public/images/Skills/Javascript.png";
+import Java from "../../../public/images/Skills/Java.png";
+import Linux from "../../../public/images/Skills/Linux.png";
+import Mongodb from "../../../public/images/Skills/Mongodb.png";
+import Mongoose from "../../../public/images/Skills/Mongoose.png";
+import Mysql from "../../../public/images/Skills/Mysql.png";
+import Nextjs from "../../../public/images/Skills/Nextjs.png";
+import Node from "../../../public/images/Skills/Node.png";
+import Npm from "../../../public/images/Skills/Npm.png";
+import Nodemon from "../../../public/images/Skills/Nodemon.png";
+import Postgress from "../../../public/images/Skills/Postgress.png";
+import Python from "../../../public/images/Skills/Python.png";
+import ReactNative from "../../../public/images/Skills/ReactNative.png";
+import React from "../../../public/images/Skills/React.png";
+import Redux from "../../../public/images/Skills/Redux.png";
+import REST from "../../../public/images/Skills/REST.png";
+import Sequelize from "../../../public/images/Skills/Sequelize.png";
+import ShadcnUI from "../../../public/images/Skills/ShadcnUI.png";
+import Tailwind from "../../../public/images/Skills/Tailwind.png";
+import Typescript from "../../../public/images/Skills/Typescript.png";
+import VSCode from "../../../public/images/Skills/VSCode.png";
+
 const SkillCard = lazy(() => import("./SkillCard"));
 const skills = [
   {
-    imageSrc: "/images/Skills/Bootstrap.png",
+    imageSrc: Bootstrap,
     skillName: "Bootstrap",
   },
   {
-    imageSrc: "/images/Skills/C.png",
+    imageSrc: C,
     skillName: "C",
   },
   {
-    imageSrc: "/images/Skills/CSharp.png",
+    imageSrc: CSharp,
     skillName: "C#",
   },
   {
-    imageSrc: "/images/Skills/CPlusPlus.png",
+    imageSrc: CPlusPlus,
     skillName: "C++",
   },
   {
-    imageSrc: "/images/Skills/CSS.png",
+    imageSrc: CSS,
     skillName: "CSS",
   },
   {
-    imageSrc: "/images/Skills/EJS.png",
+    imageSrc: EJS,
     skillName: "EJS",
   },
   {
-    imageSrc: "/images/Skills/Express.png",
+    imageSrc: Express,
     skillName: "Express",
   },
   {
-    imageSrc: "/images/Skills/Figma.png",
+    imageSrc: Figma,
     skillName: "Figma",
   },
   {
-    imageSrc: "/images/Skills/Git.png",
+    imageSrc: Git,
     skillName: "Git",
   },
   {
-    imageSrc: "/images/Skills/Github.png",
+    imageSrc: Github,
     skillName: "Github",
   },
   {
-    imageSrc: "/images/Skills/Gitlab.png",
+    imageSrc: Gitlab,
     skillName: "Gitlab",
   },
   {
-    imageSrc: "/images/Skills/Graphql.png",
+    imageSrc: Graphql,
     skillName: "Graphql",
   },
   {
-    imageSrc: "/images/Skills/HTML.png",
+    imageSrc: HTML,
     skillName: "HTML",
   },
   {
-    imageSrc: "/images/Skills/Javascript.png",
+    imageSrc: Javascript,
     skillName: "Javascript",
   },
   {
-    imageSrc: "/images/Skills/Java.png",
+    imageSrc: Java,
     skillName: "Java",
   },
   {
-    imageSrc: "/images/Skills/Linux.png",
+    imageSrc: Linux,
     skillName: "Linux",
   },
   {
-    imageSrc: "/images/Skills/Mongodb.png",
+    imageSrc: Mongodb,
     skillName: "MongoDB",
   },
   {
-    imageSrc: "/images/Skills/Mongoose.png",
+    imageSrc: Mongoose,
     skillName: "Mongoose",
   },
   {
-    imageSrc: "/images/Skills/Mysql.png",
+    imageSrc: Mysql,
     skillName: "MySQL",
   },
   {
-    imageSrc: "/images/Skills/Nextjs.png",
+    imageSrc: Nextjs,
     skillName: "Next",
   },
   {
-    imageSrc: "/images/Skills/Node.png",
+    imageSrc: Node,
     skillName: "Node",
   },
   {
-    imageSrc: "/images/Skills/Npm.png",
+    imageSrc: Npm,
     skillName: "NPM",
   },
   {
-    imageSrc: "/images/Skills/Nodemon.png",
+    imageSrc: Nodemon,
     skillName: "Nodemon",
   },
   {
-    imageSrc: "/images/Skills/Postgress.png",
+    imageSrc: Postgress,
     skillName: "Postgres",
   },
   {
-    imageSrc: "/images/Skills/Python.png",
+    imageSrc: Python,
     skillName: "Python",
   },
   {
-    imageSrc: "/images/Skills/ReactNative.png",
+    imageSrc: ReactNative,
     skillName: "React Native",
   },
   {
-    imageSrc: "/images/Skills/React.png",
+    imageSrc: React,
     skillName: "React",
   },
   {
-    imageSrc: "/images/Skills/Redux.png",
+    imageSrc: Redux,
     skillName: "Redux",
   },
   {
-    imageSrc: "/images/Skills/REST.png",
+    imageSrc: REST,
     skillName: "REST",
   },
   {
-    imageSrc: "/images/Skills/Sequelize.png",
+    imageSrc: Sequelize,
     skillName: "Sequelize",
   },
   {
-    imageSrc: "/images/Skills/ShadcnUI.png",
+    imageSrc: ShadcnUI,
     skillName: "ShadcnUI",
   },
   {
-    imageSrc: "/images/Skills/Tailwind.png",
+    imageSrc: Tailwind,
     skillName: "Tailwind",
   },
   {
-    imageSrc: "/images/Skills/Typescript.png",
+    imageSrc: Typescript,
     skillName: "Typescript",
   },
   {
-    imageSrc: "/images/Skills/VSCode.png",
+    imageSrc: VSCode,
     skillName: "VSCode",
   },
 ];
