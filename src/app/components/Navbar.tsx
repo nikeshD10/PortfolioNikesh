@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import Image from "next/image";
@@ -108,14 +109,15 @@ const Navbar = () => {
         >
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-2 mt-0">
             {navLinks.map((navLink, index) => (
-              <NavLink
-                key={index}
-                href={navLink.path}
-                title={navLink.title}
-                activeSection={activeSection}
-                setActiveSection={setActiveSection}
-                setTimeOfLastClick={setTimeOfLastClick}
-              />
+              <React.Fragment key={index}>
+                <NavLink
+                  href={navLink.path}
+                  title={navLink.title}
+                  activeSection={activeSection}
+                  setActiveSection={setActiveSection}
+                  setTimeOfLastClick={setTimeOfLastClick}
+                />
+              </React.Fragment>
             ))}
           </ul>
         </div>
