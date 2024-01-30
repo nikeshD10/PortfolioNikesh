@@ -2,7 +2,7 @@
 import Link from "next/link";
 import NavLink from "./NavLink";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Logo from "../../../public/images/svgs/Logo.svg";
@@ -31,6 +31,10 @@ const navLinks = [
     path: "#projects",
   },
   {
+    title: "Certifications",
+    path: "#certifications",
+  },
+  {
     title: "Contact",
     path: "#contact",
   },
@@ -39,15 +43,31 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [height, width] = useWindowSize();
+  const [wid, setWid] = useState(0);
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
   };
 
   useEffect(() => {
-    if (width > 768) {
+    if (width > 868) {
       setNavbarOpen(false);
     }
+  }, [width]);
+
+  // useLayoutEffect(() => {
+  //   if (width === 0) {
+  //     setWid(window.innerWidth);
+  //   } else {
+  //     setWid(width);
+  //   }
+  // }, [width]);
+  const [isScreenSmall, setIsScreenSmall] = useState(false);
+
+  useLayoutEffect(() => {
+    const newIsScreenSmall =
+      width === 0 ? window.innerWidth < 868 : width < 868;
+    setIsScreenSmall(newIsScreenSmall);
   }, [width]);
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -62,7 +82,8 @@ const Navbar = () => {
         >
           <Image src={Logo} alt="Logo" className="w-16  " />
         </Link>
-        <div className="mobile-menu block md:hidden">
+        {/* <div className={`mobile-menu block md:hidden`}> */}
+        <div className={`mobile-menu block ${isScreenSmall ? "" : "hidden"}`}>
           {navbarOpen ? (
             <button className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
               <XMarkIcon
@@ -79,7 +100,12 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        {/* <div className="menu hidden md:block md:w-auto" id="navbar"> */}
+        <div
+          // className={`menu ${wid < 868 ? "hidden" : "block w-auto"}`}
+          className={`menu ${isScreenSmall ? "hidden" : "block w-auto"}`}
+          id="navbar"
+        >
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-2 mt-0">
             {navLinks.map((navLink, index) => (
               <NavLink

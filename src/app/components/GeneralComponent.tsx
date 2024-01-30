@@ -40,7 +40,6 @@ const GeneralComponent = () => {
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={general.value}
-                  locale="en-US"
                   className="text-white text-4xl font-bold"
                   transitions={(index) => ({
                     type: "spring",

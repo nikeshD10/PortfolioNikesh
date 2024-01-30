@@ -8,7 +8,7 @@ const Footer = () => {
               <span className="text-sm text-slate-400 font-light">
                 All rights reserved{" "}
               </span>{" "}
-              © 2021 by Nikesh Dhakal
+              © 2024 by Nikesh Dhakal
             </p>
           </div>
         </div>

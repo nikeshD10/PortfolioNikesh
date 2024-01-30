@@ -31,7 +31,7 @@ const NavLink = ({
       <Link
         href={href}
         className={clsx(
-          " block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0",
+          " block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl md:text-lg lg:text-xl rounded md:p-0",
           {
             "text-white font-semibold": activeSection === linkName,
           }

@@ -4,4 +4,5 @@ export type SectionName =
   | "experience"
   | "skills"
   | "projects"
+  | "certifications"
   | "contact";

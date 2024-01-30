@@ -12,7 +12,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc py-2">
-        <li>Bachelor in Computer Science</li>
+        <li>Polytechnic Institute of Braganca</li>
+        <li>Udemy</li>
         <li>Edx CS50</li>
         <li>Academind</li>
       </ul>
@@ -136,11 +137,16 @@ const AboutSection = () => {
 
         <div className="  mt-4 md:mt-0 text-left flex flex-col justify-center h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
-          <p className="text-base lg:text-lg ">
-            I'm a full-stack developer based in the Nepal. I have a passion for
-            web development and love to create for web and mobile devices. I
-            have a strong interest in learning new technologies and frameworks.
-            I'm currently learning React Native and Next.js.
+          <p className="text-base lg:text-lg text-justify ">
+            Fresh graduate with a Bachelor's in computer science from
+            Polytechnic Institute of Braganca, Portugal and Highly skilled
+            Frontend and Backend Web (MERN Stack) and Mobile Developer (React
+            Native) with 2 years of experience in front-end development for web
+            and mobile applications and 1+ year of continuous learning and
+            growth in backend development using Node. Seeking a challenging role
+            that allows me to leverage my expertise in React, Node, API
+            development, and a wide range of technical skills to create
+            exceptional digital products.
           </p>
           {/* Creating a wrapper container  */}
           <div className="flex flex-row mt-8">

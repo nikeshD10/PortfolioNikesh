@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import CertificateSection from "./components/CertificateSection";
 import EmailSection from "./components/EmailSection";
 import ExperienceSection from "./components/ExperienceSection";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
         <SkillSet />
         <ExperienceSection />
         <Projects />
+        <CertificateSection />
         <EmailSection />
       </div>
       <Footer />

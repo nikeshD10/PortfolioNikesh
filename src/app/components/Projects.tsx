@@ -61,23 +61,23 @@ const projects = [
     url: "https://www.youtube.com/watch?v=34UNscgesSA",
     title: "Pharmacy Management App",
     description:
-      "A React Native app that allows pharmacies within a certain area to manage their schedule and allow even exchange their schedule with other pharmacies.",
+      "A React Native app that allows pharmacies to manage their schedule and allow even exchange their schedule with other pharmacies.",
     imageUrl: "/images/projects/Pharmacy.png",
     demo: "https://www.youtube.com/watch?v=34UNscgesSA",
   },
   {
     url: "https://github.com/nikeshD10/Face-Recognition-Brain",
-    title: "Face Recognition App using Clarifai API",
+    title: "Face Recognition App",
     description:
-      "A React app that uses the Clarifai API to detect faces in an image. Allows user to register and sign in and keeps track of the number of entries along with the user's name. At last, the user can upload an image and the app will detect the face in the image.",
+      "A React app that uses the Clarifai API to detect faces in an image. Authentication handled and state management with redux.",
     imageUrl: "/images/projects/FaceRecognition.png",
     demo: "https://github.com/nikeshD10/Face-Recognition-Brain",
   },
   {
     url: "https://github.com/nikeshD10/MealsToGo",
-    title: "Food Ordering App using React Native and Firebase",
+    title: "Food Ordering App",
     description:
-      "A React Native app that allows users to order food from a restaurant. The app uses Firebase for authentication and Firestore for storing data. Redux is used for state management.",
+      "A React Native app that allows users to filter food, choose user location and order food from a restaurant.",
     imageUrl: "/images/projects/MealsToGo.jpg",
     demo: "https://github.com/nikeshD10/MealsToGo",
   },
@@ -110,6 +110,7 @@ const Projects = () => {
       <h1 className="text-4xl font-bold w-full text-center">Projects</h1>
       <section
         ref={ref}
+        id="projects"
         className="w-full h-[600px] my-[180px] md:max-w-[680px] md:h-[400px] lg:max-w-[800px] "
       >
         <div className="w-full h-full relative md:flex md:items-center md:justify-center translate-y-1/4 md:-translate-y-0 shadow-[0px_14px_80px_rgba(34,35,58,0.9)] rounded-[25px] transition-all duration-300 bg-[rgba(255,255,255,0.068)] border-solid border-[rgba(255,255,255,0.425)]">
@@ -121,7 +122,13 @@ const Projects = () => {
               direction={isScreenSmall ? "horizontal" : "vertical"}
               keyboard={true}
               navigation={true}
-              mousewheel={{ invert: false }}
+              mousewheel={{
+                invert: true,
+                thresholdTime: 100,
+                sensitivity: 10,
+                thresholdDelta: 1,
+                releaseOnEdges: true,
+              }}
               pagination={{
                 clickable: true,
               }}
