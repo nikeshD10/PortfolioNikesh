@@ -46,3 +46,34 @@ export const certificateDatas = [
     imageUrl: ZeroToMastery,
   },
 ] as const;
+
+export const navLinks = [
+  {
+    title: "Home",
+    path: "#home",
+  },
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Skills",
+    path: "#skills",
+  },
+  {
+    title: "Experience",
+    path: "#experience",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "Certifications",
+    path: "#certifications",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+] as const;

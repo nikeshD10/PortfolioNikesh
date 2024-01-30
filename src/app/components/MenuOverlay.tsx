@@ -1,19 +1,23 @@
 import React from "react";
 import NavLink from "./NavLink";
+import { navLinks } from "@/lib/data";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
-type MenuOverlayProps = {
-  links: {
-    title: string;
-    path: string;
-  }[];
-};
-
-const MenuOverlay = ({ links }: MenuOverlayProps) => {
+const MenuOverlay = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <ul className=" flex flex-col py-4 items-center">
-      {links.map((link, index) => (
+      {navLinks.map((link, index) => (
         <li key={index}>
-          <NavLink key={link.title} href={link.path} title={link.title} />
+          <NavLink
+            key={link.title}
+            href={link.path}
+            title={link.title}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+            setTimeOfLastClick={setTimeOfLastClick}
+          />
         </li>
       ))}
     </ul>

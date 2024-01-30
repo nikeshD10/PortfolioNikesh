@@ -9,37 +9,7 @@ import MenuOverlay from "./MenuOverlay";
 import Logo from "../../../public/images/svgs/Logo.svg";
 import useWindowSize from "../hooks/useWindowSize";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-
-const navLinks = [
-  {
-    title: "Home",
-    path: "#home",
-  },
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Skills",
-    path: "#skills",
-  },
-  {
-    title: "Experience",
-    path: "#experience",
-  },
-  {
-    title: "Projects",
-    path: "#projects",
-  },
-  {
-    title: "Certifications",
-    path: "#certifications",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
-];
+import { navLinks } from "@/lib/data";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -121,7 +91,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen && <MenuOverlay links={navLinks} />}
+      {navbarOpen && <MenuOverlay />}
     </nav>
   );
 };
