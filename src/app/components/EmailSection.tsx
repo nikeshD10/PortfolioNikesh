@@ -97,10 +97,13 @@ const EmailSection = () => {
           to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="/">
+          <Link href="https://github.com/nikeshD10" target="_blank">
             <Image src={GithubIcon} alt="Github" width={30} height={30} />
           </Link>
-          <Link href="/">
+          <Link
+            href="https://www.linkedin.com/in/nikesh-dhakal-7102491b7/"
+            target="_blank"
+          >
             <Image src={LinkedinIcon} alt="Linkedin" width={30} height={30} />
           </Link>
         </div>

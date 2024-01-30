@@ -24,9 +24,39 @@ const config: Config = {
           "0%, 100%": { transform: "scale(1,1)" },
           "50%": { transform: "scale(0.96, 0.96)" },
         },
+        translateLeft: {
+          "0%": {
+            transform: "translateX(25%)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "0.5",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+            opacity: "1",
+          },
+        },
+        zoomOut: {
+          "0%": {
+            transform: "scale(0, 0)",
+            opacity: "0",
+          },
+
+          "50%": {
+            transform: "scale(0, 0)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1, 1)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         onClick: "onClick 200ms ease-in-out",
+        translateLeft: "translateLeft 1s ease-in-out",
+        zoomOut: "zoomOut 1s ease-in-out",
       },
     },
   },

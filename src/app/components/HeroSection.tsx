@@ -5,6 +5,7 @@ import Profile from "../../../public/images/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import Link from "next/link";
 // import GeneralComponent from "./GeneralComponent";
 
 const HeroSection = () => {
@@ -22,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <section ref={ref} id="home" className="lg:pt-5 pb-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 md:gap-12">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="text-white mb-4 text-4xl  sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -43,15 +44,24 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl sm:mr-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-            eos architecto cumque asperiores reiciendis quia assumenda
-            temporibus praesentium nam ab!
+          <p className="text-[#ADB7BE] font-sans text-base sm:text-lg mb-6 lg:text-xl text-justify mr-8">
+            Fresh graduate with a Bachelor's in computer science and Highly
+            skilled Frontend and Backend Web (MERN Stack) and Mobile Developer
+            (React Native) with 2 years of experience in front-end development
+            for web and mobile applications and 1+ year of continuous learning
+            and growth in backend development using Node. Seeking a challenging
+            role that allows me to leverage my expertise in React, Node, API
+            development, and a wide range of technical skills to create
+            exceptional digital products.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white font-semibold ">
+            <Link
+              href="https://www.linkedin.com/in/nikesh-dhakal-7102491b7/"
+              target="_blank"
+              className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white font-semibold "
+            >
               Hire Me
-            </button>
+            </Link>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3 font-semibold">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
